@@ -1,14 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <header>
+      <div id="cabeza">Burguer Queen</div>
+      <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/nueva">Nueva</router-link>
     </div>
-    <router-view/>
+    </header>
+    <body>
+      <router-view/>  
+    </body>
+    <footer>
+      hecho 2021
+    </footer>
+    
   </div>
 </template>
 
 <style>
+
+
+#cabeza {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
