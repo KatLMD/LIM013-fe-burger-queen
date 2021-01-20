@@ -13,7 +13,7 @@ export default {
 <style scoped>
 h1 {
   margin: 40px 0 0;
-  background: #000000;
+  background: #51ff00;
 }
 
 </style>
