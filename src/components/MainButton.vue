@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="boton-elec">
         
-        <a class="main-button" :href="href"> 
+        <a class="eleccion" :href="href"> 
             {{nombre}}
         </a>
         <!-- <div> algo </div> -->
@@ -17,15 +17,22 @@ export default {
 }
 </script>
 <style lang="css" scoped>
- .main-button{
-    color: rgb(0, 0, 0);
+
+
+
+.eleccion{  
+    font-weight: 900 !important;
+    color:rgb(255, 255, 255)!important;
+    border-color: rgb(255, 251, 0);
     text-decoration: none;
-    background: rgb(251, 255, 17);
-    line-height: 80px;
-    width: 50%;
-    border: 3px solid rgb(253, 253, 253);
-    float: left;
-    margin: 100px;    
-    
- }
+   
+}
+
+
+
+.boton-elec{
+    height: 85px;
+    padding: 25px;
+     margin: auto;
+}
 </style>

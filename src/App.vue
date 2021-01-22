@@ -1,34 +1,14 @@
 <template>
   <div id="app">
-    <header>
-      <div id="cabeza">Burguer Queen</div>
-      <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/nueva">Nueva</router-link>
+    <div class="row" style="text-align: center;" @click="regresar()">
+                    <header class="col-12" >
+                        <h1>BurguerQueen</h1>
+                    </header>  
     </div>
-    </header>
     <body>
 
-      <form>
-
-  <!--    <div>
-      <input type="text" v-model="newWebsite.cliente" placeholder="Cliente">
-      </div>
-      <div>
-        <input type="text" v-model="newWebsite.mesa" placeholder="mesa">
-      </div>
-      <div>
-        <input type="text" v-model="newWebsite.pedido" placeholder="pedido">
-      </div>
-      <button type="submit">
-        Save
-      </button>-->
 
 
-
-
-      </form>
 
       <router-view/>  
     </body>
@@ -40,12 +20,6 @@
 </template>
 
 <script>
-//import Firebase from 'firebase';
-//import config from './config';
-//let app = Firebase.initializeApp(config);
-// mi coleccion es db aqui esta mi base de dato entera
-//let db = app.database();
-//let websitesRef = db.ref('websites');
 
 
 export default {

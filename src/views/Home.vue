@@ -1,14 +1,28 @@
 <template>
   <div id="home" class="home">
-    <h1>Estamos listos!</h1>
-    <MainButton  class="cocina" nombre="Cocinerx" href="/ordenes"/>
-    <MainButton  class="cocina" nombre="Meserx" href="/pedidos"/> 
-    <img class="entrada" alt="Vue logo" src="../assets/phamburguer.png" >
+  <body>
+    <div class="container">
+           
+
+            <div class="row">
+                    <div class="col-12 col-md-8">
+                                <div class="row " style="text-align: center;">
+                                  <MainButton type="button" class="col-6 btn btn-outline-warning bl-button" style="text-align: center;" nombre="Cocinerx" href="/ordenes"/>
+                                </div>
+
+                                <div class="row " style="text-align: center;">
+                                   <MainButton type="button" class="col-6 btn btn-outline-warning bl-button" style="text-align: center;"  nombre="Meserx" href="/pedidos"/>
+                                </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                            <img class="img-fluid"  src="../assets/phamburguer.png" alt="" >
+                    </div>
+            </div>
+    </div>
+</body>
+
   </div>
-
-
-
-
 </template>
 
 <script>
@@ -24,29 +38,35 @@ export default {
 </script>
 
 <style scoped>
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+header{
+    color: rgb(255, 251, 0);
+    height: 110px;
+}
+
 h1{
-  color: aliceblue;
- 
+    font-family: 'Pacifico', cursive;
+    font-size: xxx-large;
 }
 
-#home {
- width: 100%;
- height: 800px;
- background-color: black;
 
+
+
+body{
+    padding: 25px;
+    background: rgb(0, 0, 0);
 }
 
-.entrada{
-  width: 50%;
-  float: right
-}
- 
 
- .cocina{
-    width: 20%;
-    height: 60px;
-  
+.row{
+    padding: 20px;
 }
- 
+
 
 </style>
