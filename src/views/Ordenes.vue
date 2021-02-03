@@ -107,8 +107,5 @@ export default {
     }
 
 
-    li{
-        list-style:none;
-    }
 
 </style>

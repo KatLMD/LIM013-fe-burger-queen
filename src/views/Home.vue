@@ -39,34 +39,4 @@ export default {
 
 <style scoped>
 
-*{
-    margin: 0px;
-    padding: 0px;
-
-}
-
-header{
-    color: rgb(255, 251, 0);
-    height: 110px;
-}
-
-h1{
-    font-family: 'Pacifico', cursive;
-    font-size: xxx-large;
-}
-
-
-
-
-body{
-    padding: 25px;
-    background: rgb(0, 0, 0);
-}
-
-
-.row{
-    padding: 20px;
-}
-
-
 </style>

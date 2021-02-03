@@ -12,9 +12,9 @@
 
       <router-view/>  
     </body>
-    <footer>
-      hecho 2021
-    </footer>
+    <!--  <footer>
+      2021/ By @katBall/LABORATORIA#13 
+    </footer> -->
     
   </div>
 </template>
@@ -35,6 +35,11 @@ export default {
           pedido:''
         }
       }
+    },
+    methods:{
+      regresar:function(){
+        this.$router.push('/')
+      }
     }
   
 }
@@ -45,7 +50,35 @@ export default {
 
 <style>
 
+*{
+    margin: 0px;
+    padding: 5px;
 
+}
+
+header{
+    color: rgb(255, 251, 0);
+    height: 110px;
+}
+
+header>h1{
+    font-family: 'Pacifico', cursive;
+    font-size: xxx-large;
+    cursor:pointer;
+}
+
+
+
+
+body{
+    padding: 25px;
+    background: rgb(0, 0, 0);
+}
+
+
+.row{
+    padding: 20px;
+}
 #cabeza {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -75,4 +108,21 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+
+
+ li{
+        list-style:none;
+}
+
+
+/* footer{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    color: rgb(255, 251, 0);
+}
+ */
+
 </style>

@@ -2,22 +2,22 @@
     <div>
           <div class="izquierda">
               <div class="row">
-                  <div class="col-4">
-                       <h3 @click="abrir('desayunos')">
+                  <div class="col-6">
+                       <h3 @click="abrir('desayunos')" class="elegir">
                         Desayunos
                         </h3>
                   </div>
-                   <div class="col-4">
-                        <h3  @click="abrir('almuerzos')">
+                   <div class="col-6">
+                        <h3  @click="abrir('almuerzos')"  class="elegir">
                    Almuerzos
                </h3>
                    </div>
                 
-                <div class="col-4">
-                     <h3 @click="abrir('listos')">
+              <!--   <div class="col-4">
+                     <h3 @click="abrir('listos')"  class="elegir">
                    Listos
                </h3>
-                </div>
+                </div> -->
                </div>
             <div   ref="desayunos" >
                
@@ -51,32 +51,34 @@
            </div>
           </div>
           <div class="derecha">
-              <input v-model.lazy="nombre" type="text" placeholder="nombre">
-              <input v-model="numero" type="number" placeholder="numeromesa">
+              <input v-model.lazy="nombre" type="text" placeholder="nombre del cliente" class="llenado">
+              <input v-model="numero" type="number" placeholder="# mesa" class="llenado-mesa">
               <div>
-                  <h1>Detalle Pedido</h1>
+                  <h1>Detalle del Pedido</h1>
                   <div>
                       <ul>
                           <li :key="i" v-for="(item , i ) in pedido">
                               <div style="display:flex">
-                                  <h4>{{item.nombre}} - {{item.precio}}</h4>
+                                 
                                   <button style="margin-left:10px" @click="duplicar(i)">
-                                      +
+                                      <img class="tachito" src="../assets/addicionar.png"  alt="" style="height:30px;width: auto;"> 
                                   </button>
-                                  <button style="margin-left:10px" @click="quitar(i)">
-                                      -
+                                   <h4>{{item.nombre}} - {{item.precio}}</h4>
+                                  <button style="margin-left:10px" @click="quitar(i)">   
+                                      <img class="tachito" src="../assets/deleeete.png"  alt="" style="height:30px;width: auto;"> 
                                   </button>
+
                               </div>
                           </li>
                           <li>
-                              Total: (S/) {{total}}
+                              Total del pedido: S/. {{total}}
                           </li>
                       </ul>
                   </div>
               </div>
               <div>
-                  <button @click="enviarPedido()">
-                      Enviar Pedido
+                  <button @click="enviarPedido()"   class="enviapedido">
+                      ENVIAR PEDIDO
                   </button>
               </div>
           </div>
@@ -201,40 +203,10 @@ export default {
 </script>
 <style lang="css" scoped>
 
-.izquierda{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    background: rgb(0, 0, 0);
-    
-    width: 50%;
-    /*border: 3px solid rgb(253, 253, 253);*/
-    float: left;
-   /* margin: 100px;*/
-}
-.derecha{
-    color: rgb(255, 230, 1);
-    text-decoration: none;
-    background: rgb(0, 0, 0);
-    
-    width: 50%;
-    border: 3px solid rgb(253, 253, 253);
-    float: right;
-    /*margin: 100px;*/
-}
+*{
+      box-sizing: border-box;
 
-.clearfix{
-    float: none;
-    clear: both;
 }
-
- li{
-        list-style:none;
-}
-
-.none{
-        display:none;
-    }
-
 
 </style>
 

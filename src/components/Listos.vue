@@ -1,4 +1,4 @@
-<template>
+/* <template>
     <div>
 
     </div>
@@ -7,4 +7,4 @@
 export default {
     name:"Listos"
 }
-</script>
+</script> */
