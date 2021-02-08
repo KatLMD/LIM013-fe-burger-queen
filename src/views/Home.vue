@@ -2,8 +2,6 @@
   <div id="home" class="home">
   <body>
     <div class="container">
-           
-
             <div class="row">
                     <div class="col-12 col-md-8">
                                 <div class="row " style="text-align: center;">
@@ -18,7 +16,7 @@
                     <div class="col-12 col-md-4">
                             <img class="img-fluid"  src="../assets/phamburguer.png" alt="" >
                     </div>
-            </div>
+           </div>
     </div>
 </body>
 
