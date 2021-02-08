@@ -53,21 +53,21 @@ export default {
 *{
     margin: 0px;
     padding: 5px;
-
 }
 
-header{
-    color: rgb(255, 251, 0);
+header>h1{
+    color: rgb(255, 251, 0)!important;
     height: 110px;
 }
 
+h3, h1, li{
+  color:white;
+}
 header>h1{
     font-family: 'Pacifico', cursive;
     font-size: xxx-large;
     cursor:pointer;
 }
-
-
 
 
 body{
@@ -108,8 +108,6 @@ body{
 #nav a.router-link-exact-active {
   color: #42b983;
 }
-
-
 
  li{
         list-style:none;

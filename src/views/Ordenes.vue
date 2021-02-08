@@ -105,7 +105,9 @@ export default {
     .none{
         display:none;
     }
-
+    .ordenes-pedido{
+        background:#198754
+    }
 
 
 </style>

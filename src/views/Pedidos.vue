@@ -24,7 +24,7 @@
                <ul>
                    <li :key="i" v-for="(item,i) in desayuno">
                        <button @click="agregarItem(item)"> 
-                           {{item.nombre}}
+                           {{item.nombre}} {{item.cantidad}}
                        </button>
                    </li>
                </ul>
@@ -57,17 +57,28 @@
                   <h1>Detalle del Pedido</h1>
                   <div>
                       <ul>
-                          <li :key="i" v-for="(item , i ) in pedido">
-                              <div style="display:flex">
-                                 
-                                  <button style="margin-left:10px" @click="duplicar(i)">
-                                      <img class="tachito" src="../assets/addicionar.png"  alt="" style="height:30px;width: auto;"> 
-                                  </button>
-                                   <h4>{{item.nombre}} - {{item.precio}}</h4>
-                                  <button style="margin-left:10px" @click="quitar(i)">   
+                          <li :key="i" v-for="(plato , i ) in pedido">
+
+                              <div class="row">
+                                  <div class="col-2">
+                                      <button style="margin-left:10px" @click="agregarItem(plato)">
+                                        <img class="tachito" src="../assets/addicionar.png"  alt="" style="height:30px;width: auto;"> 
+                                      </button>
+                                  </div>
+                                  <div class="col-4">
+                                      <h4>{{plato.nombre}}</h4>
+                                  </div>
+                                  <div  class="col-2"> 
+                                      <h4>x{{plato.cantidad}}</h4>
+                                  </div>
+                                  <div class="col-2">
+                                      <h4>S/ {{plato.precio*plato.cantidad}}</h4>
+                                  </div>
+                                  <div class="col-2">
+                                      <button style="margin-left:10px" @click="quitar(i)">   
                                       <img class="tachito" src="../assets/deleeete.png"  alt="" style="height:30px;width: auto;"> 
                                   </button>
-
+                                  </div>
                               </div>
                           </li>
                           <li>
@@ -110,15 +121,15 @@ export default {
         total:function (){
            let total =  0;
             for (const item of this.pedido) {
-                total = total + item.precio 
+                total = total + item.precio*item.cantidad
             } 
             return total;
         }
     },
     methods:{
-        duplicar:function(agregar){
+        /*duplicar:function(agregar){
             this.pedido = [...this.pedido, this.pedido[agregar]]
-        },
+        }, */
         quitar:function(sacar){
             let temp = [...this.pedido ];
             for (let index = 0; index < temp.length; index++) {
@@ -127,10 +138,17 @@ export default {
                }
                 
             }
-            this.pedido = [...temp];
+            this.pedido = temp;
         },
         agregarItem:function(item){
-            this.pedido = [...this.pedido,item];
+             let itemDesayuno = this.desayuno.filter(obj=>obj.id==item.id)
+
+            let buscado = this.pedido.findIndex(obj=>obj.id==item.id)
+            if(buscado===-1){
+                this.pedido = [...this.pedido,{...item}];
+            }else{
+                this.pedido[buscado].cantidad++
+            }           
         },
         enviarPedido: async function (){
             if(this.nombre && this.numero){
@@ -206,6 +224,9 @@ export default {
 *{
       box-sizing: border-box;
 
+}
+.none{
+    display:none
 }
 
 </style>
