@@ -108,6 +108,5 @@ export default {
     .ordenes-pedido{
         background:#198754
     }
-
-
+    
 </style>

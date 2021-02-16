@@ -8,12 +8,12 @@
               <div class="row">
                   <div class="col-6">
                        <h3 @click="abrir('desayunos')" class="elegir">
-                        Desayunos
+                        DESAYUNOS
                         </h3>
                   </div>
                    <div class="col-6">
                         <h3  @click="abrir('almuerzos')"  class="elegir">
-                   Almuerzos
+                   ALMUERZOS
                </h3>
                    </div>
                 
@@ -268,7 +268,7 @@ header>h1 {
 }
 
 .col-6{
-    width: 180px;
+    width: 200px;
     height: 50px;
     cursor: pointer;
     background: rgb(255, 251, 0);
@@ -287,6 +287,19 @@ h3{
     font-weight:900;
 }
 
+.llenado{
+     width: 180px;
+    height: 50px;
+
+}
+
+.llenado-mesa{
+    width: 180px;
+    height: 50px;
+    margin: 15px;
+ 
+
+}
 
 </style>
 
